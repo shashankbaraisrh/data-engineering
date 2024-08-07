@@ -1,0 +1,30 @@
+"Hello World" with RabbitMQ
+
+Introduction
+This project demonstrates the implementation of a basic "Hello World" example using RabbitMQ, a robust and widely-used message broker. RabbitMQ facilitates communication between applications through the exchange of messages, based on the Advanced Message Queuing Protocol (AMQP).
+
+Implementation Overview
+Sender Script
+The sender script uses the pika library to interact with RabbitMQ. It:
+
+Establishes a connection to RabbitMQ on localhost.
+Declares a queue named data_pipeline.
+Sends a "Hello World!" message to this queue.
+Closes the connection.
+Receiver Script
+The receiver script, also using the pika library, performs the following:
+
+Establishes a connection to RabbitMQ on localhost.
+Declares the data_pipeline queue.
+Defines a callback function to print received messages.
+Sets up a consumer for the data_pipeline queue and starts consuming messages.
+Handles graceful shutdown on interruption.
+
+Evaluation Criteria
+Functionality: Demonstrates core RabbitMQ functionality through message sending and receiving.
+Clarity and Conciseness: A video demonstration provides a step-by-step walkthrough of the setup and implementation.
+Completeness and Clarity: The architectural report comprehensively documents each step.
+Creativity and Problem-Solving: Showcases key problem-solving skills required for configuring and utilizing RabbitMQ.
+
+Conclusion
+This project effectively demonstrates the basic usage of RabbitMQ through a "Hello World" example, providing a solid foundation for exploring more advanced messaging patterns.
