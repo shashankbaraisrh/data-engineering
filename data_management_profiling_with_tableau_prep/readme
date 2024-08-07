@@ -1,0 +1,42 @@
+YouTube Trending Videos Data Profiling and Cleaning
+
+Overview
+This project focuses on profiling and cleaning a dataset of YouTube Trending Videos from five different countries. The goal is to create a unified and cleaned dataset suitable for analysis, particularly sentiment analysis and popularity assessment. The project involves several key steps, including data merging, cleaning, transforming, and enriching.
+
+Files and Ingredients
+Five CSV Files: These files contain YouTube Trending Videos data from five different countries.
+One Text File: This file contains category information related to the YouTube videos.
+
+Steps
+1. Combine CSV Files
+Join Function: Combine all five CSV files using a join function.
+Remove Irrelevant Fields: Exclude fields such as thumbnails and links.
+Result: A combined dataset with 18 fields and 170K rows.
+2. Improve Trending-Date Field
+Convert to Date Format: Ensure the Trending-Date field is in a proper date format.
+Correct Discrepancies: Use the Split function to separate days, months, and years, then correct the format with a calculated field.
+3. Clean and Extract Keywords from Tag Fields
+Eliminate Duplicates: Create a calculated column to remove duplicate tags, rename it to Tags.
+Clean Special Characters: Clean special characters and excess whitespace in the Tag field, rename it to 'main tag'.
+4. Prepare for Sentiment Analysis
+Extract Sentiment Character: Extract the first character from the Description column to capture sentiment.
+Clean Description: Clean special characters and excess whitespace, preserving the original Description field.
+5. Rename Fields for Clarity
+Rename Columns: Ensure all fields/columns are renamed for clarity to aid in user story identification.
+6. Enrich and Integrate with Category Information
+Left Outer Join: Combine the cleaned CSV with the text file containing categories using a left outer join.
+Key Utilization: Use 'category_id' from the CSV and 'id' from the text file.
+7. Utilize Aggregate Functions for Business Queries
+Popularity Assessment: Examine views, likes, and dislikes over days or months for each Video-id.
+Generate Output CSV: Produce a CSV named final 2 with 68K rows and 5 columns.
+8. Final Data Cleaning
+Remove Nulls and Duplicates: Clean the main CSV by removing null values, duplicates, and unnecessary fields like category_id and id.
+Ensure Precedence: Make sure the category field from the text file takes precedence.
+Resulting Output CSV: Produce a final output CSV named Final 1 with 170K rows and 17 fields.
+Output Files
+
+Final 1: A cleaned dataset with 170K rows and 17 fields.
+Final 2: An aggregated dataset with 68K rows and 5 columns.
+
+Conclusion
+This project streamlines the process of combining, cleaning, and enriching YouTube Trending Videos data from multiple sources, making it suitable for detailed analysis and business insights. The resulting datasets are well-structured and ready for further exploration, including sentiment analysis and popularity assessment.
